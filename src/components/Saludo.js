@@ -1,8 +1,8 @@
 function Saludo(props) {
   var ejemplo = "Hoy es martes";
 
-  //var name = props.nombre;
-  //var age = props.edad;
+  var name = props.nombre;
+  var age = props.edad;
   const botonPulsado = () => {
     console.log("Has pulsado el boton");
     ejemplo = "Y mañana miércoles";
@@ -12,6 +12,7 @@ function Saludo(props) {
     console.log("La suma es: " + suma);
     return suma;
   };
+
   //Los nombres de las propiedade los estructura no por posicion
   //sino por el nombre de los elementos enviados por el parent
 
