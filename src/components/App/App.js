@@ -6,11 +6,16 @@ import SumarDosNumeros from "./../Sumar";
 function App() {
   //Si queremos enviar parametros a la funcion, se quitan los parentesis
   // y se sustituye por el/los parametro(s)
-  const metodoDelPadre = (descripcion) => {
-    console.log("Metodo del padre: " + descripcion);
-  };
-  const sumarDosNumerosPadre = (sumaTotal) => {
-    console.log("Suma total" + sumaTotal);
+  // const metodoDelPadre = (descripcion) => {
+  //   console.log("Metodo del padre: " + descripcion);
+  // };
+  // const sumarDosNumerosPadre = (sumaTotal) => {
+  //   console.log("Suma total" + sumaTotal);
+  // };
+  const sumarPadre = (num1, num2) => {
+    //num1 y num2 lo recibimos desde el hijo
+    var suma = parseInt(num1) + parseInt(num2);
+    console.log("Suma padre: " + suma);
   };
   return (
     <div className="App">
@@ -22,7 +27,13 @@ function App() {
         num1="20"
         num2="41"
         color="green"
-        metodo={sumarDosNumerosPadre}
+        realizarSuma={sumarPadre}
+      />
+      <SumarDosNumeros
+        num1="70"
+        num2="45"
+        color="red"
+        realizarSuma={sumarPadre}
       />
     </div>
   );
